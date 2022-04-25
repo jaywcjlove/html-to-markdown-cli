@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
-  "name": "html-to-markdown-cli",
   "private": true,
+  "title": "html-to-markdown",
   "version": "1.0.0",
   "description": "",
   "scripts": {
@@ -10,7 +10,9 @@
     "build:cli": "lerna exec --scope @wcj/html-to-markdown-cli -- tsbb build --disable-babel --no-esm -f src/cli.ts",
     "watch:cli": "lerna exec --scope @wcj/html-to-markdown-cli -- tsbb watch --disable-babel --no-esm -f src/cli.ts",
     "test": "tsbb test",
-    "coverage": "tsbb test --coverage"
+    "coverage": "tsbb test --coverage",
+    "start": "idoc --watch",
+    "doc": "idoc"
   },
   "repository": {
     "type": "git",

@@ -28,7 +28,6 @@
     "@wcj/html-to-markdown": "1.0.0",
     "fs-extra": "~10.1.0",
     "minimist": "~1.2.6",
-    "cheerio": "^1.0.0-rc.10",
     "node-fetch": "^3.2.3"
   }
 }

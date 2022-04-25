@@ -13,7 +13,7 @@ npm i @wcj/html-to-markdown
 
 Command line tool
 
-```bash
+```shell
 $ npx @wcj/html-to-markdown-cli ./html/index.html
 $ npx @wcj/html-to-markdown-cli https://jaywcjlove.github.io/idoc/
 Or
