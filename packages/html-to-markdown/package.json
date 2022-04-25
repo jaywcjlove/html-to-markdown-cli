@@ -17,7 +17,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jaywcjlove/idoc.git"
+    "url": "https://github.com/jaywcjlove/html-to-markdown-cli.git"
   },
   "files": [
     "lib",

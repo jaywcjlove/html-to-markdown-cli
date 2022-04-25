@@ -1,7 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
   "private": true,
-  "title": "html-to-markdown",
   "version": "1.0.0",
   "description": "",
   "scripts": {

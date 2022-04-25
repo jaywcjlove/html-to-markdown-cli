@@ -1,18 +1,25 @@
-@wcj/html-to-markdown-cli
+`@wcj/html-to-markdown-cli`
 ===
 
 Command line tool for html conversion markdown.
 
 ## Quick Start
 
-```bash
+```shell
 $ npx @wcj/html-to-markdown-cli ./html/index.html
+# => # Markdown String
 $ npx @wcj/html-to-markdown-cli https://jaywcjlove.github.io/idoc/
+# => # Markdown String
+```
+
 Or
 
+```shell
 $ sudo npm i @wcj/html-to-markdown-cli -g
 $ html-to-markdown ./html/index.html
+# => # Markdown String
 $ html-to-markdown https://jaywcjlove.github.io/idoc/
+# => # Markdown String
 ```
 
 ## Command Help

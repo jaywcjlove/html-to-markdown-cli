@@ -1,7 +1,7 @@
-@wcj/html-to-markdown
+`@wcj/html-to-markdown`
 ===
 
-HTML conversion tool to markdown. command line tool => [`@wcj/html-to-markdown-cli`](../cli/README.md).
+HTML conversion tool to markdown. command line tool => [`@wcj/html-to-markdown-cli`](https://npmjs.com/@wcj/html-to-markdown-cli).
 
 ## Installation
 
@@ -15,12 +15,17 @@ Command line tool
 
 ```shell
 $ npx @wcj/html-to-markdown-cli ./html/index.html
+# => # Markdown String
 $ npx @wcj/html-to-markdown-cli https://jaywcjlove.github.io/idoc/
-Or
+# => # Markdown String
+
+# Or
 
 $ sudo npm i @wcj/html-to-markdown-cli -g
 $ html-to-markdown ./html/index.html
+# => # Markdown String
 $ html-to-markdown https://jaywcjlove.github.io/idoc/
+# => # Markdown String
 ```
 
 ## Usage
