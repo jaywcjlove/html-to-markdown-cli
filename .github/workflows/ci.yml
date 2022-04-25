@@ -18,6 +18,7 @@ jobs:
       - run: npm run build
       - run: npm run build:cli
       - run: npm run doc
+      - run: npm run coverage
 
       - name: Create Coverage Badges
         uses: jaywcjlove/coverage-badges-cli@main
