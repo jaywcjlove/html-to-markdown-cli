@@ -14,7 +14,10 @@ jobs:
           node-version: 16
 
       - run: npm install
+      - run: npm install --workspaces
       - run: npm run build
+      - run: npm run build:cli
+      - run: npm run doc
 
       - name: Generate Contributors Images
         uses: jaywcjlove/github-action-contributors@main
@@ -58,3 +61,8 @@ jobs:
             Comparing Changes: ${{ steps.changelog.outputs.compareurl }}  
 
             ${{ steps.changelog.outputs.changelog }}
+
+      - uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+          package: ./packages/html-to-markdown/package.json
