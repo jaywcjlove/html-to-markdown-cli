@@ -25,10 +25,10 @@
     "node": "^14.16 || >=16.0.0"
   },
   "dependencies": {
-    "@types/minimist": "~1.2.2",
+    "@types/minimist": "1.2.2",
     "@wcj/html-to-markdown": "1.0.0",
-    "fs-extra": "~10.1.0",
-    "minimist": "~1.2.6",
-    "node-fetch": "^3.2.3"
+    "fs-extra": "10.1.0",
+    "minimist": "1.2.6",
+    "node-fetch": "3.2.3"
   }
 }
