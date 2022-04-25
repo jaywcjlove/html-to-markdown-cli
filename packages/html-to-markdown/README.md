@@ -55,6 +55,7 @@ export default function htmlToMarkdown(options?: Options): Promise<string>;
 $ npm i
 $ npm install --workspaces
 $ npm run build
+$ npm run build:cli
 ```
 
 ## Contributors
