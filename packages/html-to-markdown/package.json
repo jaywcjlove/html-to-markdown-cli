@@ -1,6 +1,6 @@
 {
   "name": "@wcj/html-to-markdown",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "html conversion tool to markdown.",
   "main": "./lib/index.js",
   "exports": "./lib/index.js",
@@ -28,9 +28,9 @@
   },
   "dependencies": {
     "rehype": "^12.0.1",
-    "rehype-remark": "^9.1.2",
-    "rehype-ignore": "^1.0.1",
     "rehype-format": "^4.0.1",
+    "rehype-ignore": "^1.0.1",
+    "rehype-remark": "^9.1.2",
     "rehype-video": "^1.2.2",
     "remark-gfm": "^3.0.1",
     "remark-stringify": "^10.0.2",

@@ -8,6 +8,7 @@
     "watch": "lerna exec --scope @wcj/html-to-markdown -- tsbb watch --disable-babel",
     "build:cli": "lerna exec --scope @wcj/html-to-markdown-cli -- tsbb build --disable-babel --no-esm -f src/cli.ts",
     "watch:cli": "lerna exec --scope @wcj/html-to-markdown-cli -- tsbb watch --disable-babel --no-esm -f src/cli.ts",
+    "version": "lerna version --exact --force-publish --no-push --no-git-tag-version",
     "test": "tsbb test",
     "coverage": "tsbb test --coverage",
     "start": "idoc --watch",
