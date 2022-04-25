@@ -2,7 +2,6 @@
   "$schema": "https://json.schemastore.org/package.json",
   "private": true,
   "version": "1.0.0",
-  "description": "",
   "scripts": {
     "build": "lerna exec --scope @wcj/html-to-markdown -- tsbb build --disable-babel",
     "watch": "lerna exec --scope @wcj/html-to-markdown -- tsbb watch --disable-babel",
@@ -25,6 +24,9 @@
   "jest": {
     "testMatch": [
       "<rootDir>/packages/**/src/**/__test__/*.{js,ts}"
+    ],
+    "collectCoverageFrom": [
+      "<rootDir>/packages/html-to-markdown/src/*.{js,ts}"
     ],
     "transformIgnorePatterns": [
       "<rootDir>/node_modules/?!(.*)"
