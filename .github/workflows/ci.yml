@@ -19,6 +19,11 @@ jobs:
       - run: npm run build:cli
       - run: npm run doc
 
+      - name: Create Coverage Badges
+        uses: jaywcjlove/coverage-badges-cli@main
+
+      - run: cp -rp coverage dist
+
       - name: Generate Contributors Images
         uses: jaywcjlove/github-action-contributors@main
         with:
