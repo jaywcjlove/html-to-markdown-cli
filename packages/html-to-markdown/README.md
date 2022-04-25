@@ -73,6 +73,10 @@ $ npm run build
 $ npm run build:cli
 ```
 
+## Related
+
+- [markdown-to-html-cli](https://github.com/jaywcjlove/markdown-to-html-cli) Command line tool that converts markdown to HTML.
+
 ## Contributors
 
 As always, thanks to our amazing contributors!
