@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "html-to-markdown-cli",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "lerna exec --scope @wcj/html-to-markdown -- tsbb build --disable-babel",
+    "watch": "lerna exec --scope @wcj/html-to-markdown -- tsbb watch --disable-babel",
+    "build:cli": "lerna exec --scope @wcj/html-to-markdown-cli -- tsbb build --disable-babel --no-esm -f src/cli.ts",
+    "watch:cli": "lerna exec --scope @wcj/html-to-markdown-cli -- tsbb watch --disable-babel --no-esm -f src/cli.ts",
+    "test": "tsbb test",
+    "coverage": "tsbb test --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaywcjlove/html-to-markdown-cli.git"
+  },
+  "workspaces": [
+    "packages/**"
+  ],
+  "license": "MIT",
+  "jest": {
+    "testMatch": [
+      "<rootDir>/packages/**/src/**/__test__/*.{js,ts}"
+    ],
+    "transformIgnorePatterns": [
+      "<rootDir>/node_modules/?!(.*)"
+    ]
+  },
+  "devDependencies": {
+    "idoc": "^1.13.11",
+    "lerna": "^4.0.0",
+    "tsbb": "^3.7.2"
+  }
+}

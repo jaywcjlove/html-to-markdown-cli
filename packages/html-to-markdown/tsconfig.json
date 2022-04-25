@@ -1,0 +1,9 @@
+{
+  "extends": "../../tsconfig",
+  "compilerOptions": {
+    "outDir": "lib",
+    "baseUrl": "."
+  },
+  "include": ["src"],
+  "exclude": ["lib"]
+}

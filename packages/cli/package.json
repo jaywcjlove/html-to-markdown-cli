@@ -1,0 +1,34 @@
+{
+  "name": "@wcj/html-to-markdown-cli",
+  "version": "1.0.0",
+  "description": "Command line tool for html conversion markdown.",
+  "author": "jaywcjlove",
+  "type": "module",
+  "license": "MIT",
+  "bin": {
+    "html-to-markdown": "lib/cli.js"
+  },
+  "keywords": [
+    "html-to-markdown",
+    "markdown",
+    "html",
+    "document",
+    "cli",
+    "tool"
+  ],
+  "files": [
+    "lib",
+    "src"
+  ],
+  "engines": {
+    "node": "^14.16 || >=16.0.0"
+  },
+  "dependencies": {
+    "@types/minimist": "~1.2.2",
+    "@wcj/html-to-markdown": "1.0.0",
+    "fs-extra": "~10.1.0",
+    "minimist": "~1.2.6",
+    "cheerio": "^1.0.0-rc.10",
+    "node-fetch": "^3.2.3"
+  }
+}
