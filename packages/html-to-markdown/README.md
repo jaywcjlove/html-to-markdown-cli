@@ -44,11 +44,22 @@ htmlToMarkdown({ html: '<h1>Markdown String</h1>' });
 ## API
 
 ```ts
+import { PluggableList } from 'unified';
 import { Options as RehypeParseOptions } from 'rehype-parse';
 declare type Options = {
   html?: string;
   url?: string;
   rehypeParseOption?: RehypeParseOptions;
+  /**
+   * List of [remark plugins](https://github.com/remarkjs/remark/blob/main/doc/plugins.md#list-of-plugins) to use.
+   * See the next section for examples on how to pass options
+   */
+  remarkPlugins?: PluggableList;
+  /**
+   * List of [rehype plugins](https://github.com/rehypejs/rehype/blob/main/doc/plugins.md#list-of-plugins) to use.
+   * See the next section for examples on how to pass options
+   */
+  rehypePlugins?: PluggableList;
 };
 export default function htmlToMarkdown(options?: Options): Promise<string>;
 ```
