@@ -11,9 +11,13 @@ Command line tool for html conversion markdown.
 
 ```shell
 $ npx @wcj/html-to-markdown-cli ./html/index.html
-# => # Markdown String
+# 🌐 Request: /Users/xxx/index.html
+# 🎉 Compliled successfully!
+# ╰┈ Output: /Users/xxx/dist/index.md
 $ npx @wcj/html-to-markdown-cli https://jaywcjlove.github.io/idoc/
-# => # Markdown String
+# 🌐 Request: https://jaywcjlove.github.io/idoc/
+# 🎉 Compliled successfully!
+# ╰┈ Output: /Users/xxx/dist/idoc.md
 ```
 
 Or
