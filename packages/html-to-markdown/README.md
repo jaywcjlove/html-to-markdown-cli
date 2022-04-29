@@ -18,11 +18,11 @@ npm i @wcj/html-to-markdown
 Command line tool
 
 ```shell
-
 $ npx @wcj/html-to-markdown-cli ./html/index.html
 # 🌐 Request: /Users/xxx/index.html
 # 🎉 Compliled successfully!
 # ╰┈ Output: /Users/xxx/dist/index.md
+
 $ npx @wcj/html-to-markdown-cli https://jaywcjlove.github.io/idoc/
 # 🌐 Request: https://jaywcjlove.github.io/idoc/
 # 🎉 Compliled successfully!
@@ -35,6 +35,7 @@ $ html-to-markdown ./html/index.html
 # 🌐 Request: /Users/xxx/html/index.html
 # 🎉 Compliled successfully!
 # ╰┈ Output: /Users/xxx/html/dist/index.md
+
 $ html-to-markdown https://jaywcjlove.github.io/idoc/
 # 🌐 Request: https://jaywcjlove.github.io/idoc/
 # 🎉 Compliled successfully!
