@@ -3,10 +3,10 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "build": "lerna exec --scope @wcj/html-to-markdown -- tsbb build --disable-babel",
-    "watch": "lerna exec --scope @wcj/html-to-markdown -- tsbb watch --disable-babel",
-    "build:cli": "lerna exec --scope @wcj/html-to-markdown-cli -- tsbb build --disable-babel --no-esm -f src/cli.ts",
-    "watch:cli": "lerna exec --scope @wcj/html-to-markdown-cli -- tsbb watch --disable-babel --no-esm -f src/cli.ts",
+    "build": "lerna exec --scope @wcj/html-to-markdown -- tsbb build",
+    "watch": "lerna exec --scope @wcj/html-to-markdown -- tsbb watch",
+    "build:cli": "lerna exec --scope @wcj/html-to-markdown-cli -- tsbb build",
+    "watch:cli": "lerna exec --scope @wcj/html-to-markdown-cli -- tsbb watch",
     "version": "lerna version --exact --force-publish --no-push --no-git-tag-version",
     "test": "tsbb test",
     "coverage": "tsbb test --coverage",
@@ -33,8 +33,8 @@
     ]
   },
   "devDependencies": {
-    "idoc": "^1.13.11",
-    "lerna": "^5.0.0",
-    "tsbb": "^3.7.2"
+    "idoc": "^1.25.0",
+    "lerna": "^6.6.1",
+    "tsbb": "^4.1.5"
   }
 }
