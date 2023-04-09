@@ -1,4 +1,4 @@
-name: CI
+name: Website & Publishing
 on:
   push:
     branches:
@@ -6,12 +6,13 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
           node-version: 16
+          registry-url: 'https://registry.npmjs.org'
 
       - run: npm install
       - run: npm install --workspaces
@@ -34,9 +35,13 @@ jobs:
 
       - name: Create Tag
         id: create_tag
-        uses: jaywcjlove/create-tag-action@v1.3.6
+        uses: jaywcjlove/create-tag-action@main
         with:
           package-path: ./packages/html-to-markdown/package.json
+
+      - name: get tag version
+        id: tag_version
+        uses: jaywcjlove/changelog-generator@main
 
       - name: Deploy Website
         uses: peaceiris/actions-gh-pages@v3
@@ -49,7 +54,7 @@ jobs:
 
       - name: Generate Changelog
         id: changelog
-        uses: jaywcjlove/changelog-generator@v1.5.3
+        uses: jaywcjlove/changelog-generator@main
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           filter-author: (jaywcjlove|小弟调调™|dependabot\[bot\]|Renovate Bot)
@@ -68,7 +73,9 @@ jobs:
 
             ${{ steps.changelog.outputs.changelog }}
 
-      - uses: JS-DevTools/npm-publish@v1
-        with:
-          token: ${{ secrets.NPM_TOKEN }}
-          package: ./packages/html-to-markdown/package.json
+      - name: 📦 @wcj/html-to-markdown-cli publish to NPM
+        run: npm publish --access public
+        continue-on-error: true
+        working-directory: packages/html-to-markdown
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
