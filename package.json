@@ -34,7 +34,7 @@
   },
   "devDependencies": {
     "idoc": "^1.25.0",
-    "lerna": "^6.6.1",
+    "lerna": "^7.0.0",
     "tsbb": "^4.1.5"
   }
 }
