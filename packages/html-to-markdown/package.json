@@ -31,7 +31,7 @@
     "rehype-format": "^4.0.1",
     "rehype-ignore": "^1.0.1",
     "rehype-remark": "^9.1.2",
-    "rehype-video": "^1.2.2",
+    "rehype-video": "^2.0.0",
     "remark-gfm": "^3.0.1",
     "remark-stringify": "^10.0.2",
     "unified": "^10.1.2"
