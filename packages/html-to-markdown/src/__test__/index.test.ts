@@ -1,4 +1,4 @@
-import htmlToMarkdown from '..';
+import htmlToMarkdown from '../index.js';
 
 it('htmlToMarkdown test case basic-syntax', async () => {
   expect(await htmlToMarkdown()).toEqual('');
@@ -21,7 +21,7 @@ it('htmlToMarkdown test case ignore', async () => {
 
 it('htmlToMarkdown test list', async () => {
   expect(await htmlToMarkdown({ html: `<ul class="contains-task-list"> <li class="task-list-item"><input type="checkbox" checked="" disabled=""> <code>idoc.yml</code> 在根目录下添加</li> <li class="task-list-item"><input type="checkbox" checked="" disabled=""> <code>idoc.chapters.yml</code> 左侧栏文件导航</li> <li class="task-list-item"><input type="checkbox" checked="" disabled=""> <code>注释配置</code> 在 markdown 文档中添加的配置</li> </ul>` }))
-    .toEqual('*   `idoc.yml` 在根目录下添加\n*   `idoc.chapters.yml` 左侧栏文件导航\n*   `注释配置` 在 markdown 文档中添加的配置\n');
+    .toEqual('* `idoc.yml` 在根目录下添加\n* `idoc.chapters.yml` 左侧栏文件导航\n* `注释配置` 在 markdown 文档中添加的配置\n');
 });
 
 const tableStr = `<table>
