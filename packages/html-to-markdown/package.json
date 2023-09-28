@@ -1,6 +1,6 @@
 {
   "name": "@wcj/html-to-markdown",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "html conversion tool to markdown.",
   "main": "./lib/index.js",
   "exports": "./lib/index.js",
