@@ -5,6 +5,8 @@
   "author": "jaywcjlove",
   "type": "module",
   "license": "MIT",
+  "homepage": "https://jaywcjlove.github.io/html-to-markdown-cli",
+  "funding": "https://jaywcjlove.github.io/#/sponsor",
   "repository": "https://github.com/jaywcjlove/html-to-markdown-cli/tree/main/packages/cli",
   "bin": {
     "html-to-markdown": "lib/cli.js"
