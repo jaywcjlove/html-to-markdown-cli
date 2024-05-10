@@ -34,19 +34,23 @@ $ html-to-markdown https://jaywcjlove.github.io/idoc/
 ## Command Help
 
 ```bash
-Usage: html-to-markdown <URL|file path> [options] [--help|h] [--version|v]
+Usage: html-to-markdown <URL|file path|-> [options] [--help|h] [--version|v]
+
+Passing "-" as the first arg will take input from STDIN
 
 Options:
 
   -v, --version, Show version number
   -h, --help, Displays help information.
   -o, --output <dir-path>, Output directory. defalut(dist)
+  -s, --stdout, Output to stdout
 
 Example:
 
   html-to-markdown ./html/index.html
   html-to-markdown https://jaywcjlove.github.io/idoc/
   html-to-markdown --output="dist"
+  echo "<h1>hello world</h1>"| html-to-markdown - --stdout
 ```
 
 ## Support Config

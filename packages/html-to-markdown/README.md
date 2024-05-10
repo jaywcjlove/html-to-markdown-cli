@@ -43,6 +43,44 @@ $ html-to-markdown https://jaywcjlove.github.io/idoc/
 # ╰┈ Output: /Users/xxx/dist/idoc.md
 ```
 
+Command Help
+
+```bash
+Usage: html-to-markdown <URL|file path|-> [options] [--help|h] [--version|v]
+
+Passing "-" as the first arg will take input from STDIN
+
+Options:
+
+  -v, --version, Show version number
+  -h, --help, Displays help information.
+  -o, --output <dir-path>, Output directory. defalut(dist)
+  -s, --stdout, Output to stdout
+
+Example:
+
+  html-to-markdown ./html/index.html
+  html-to-markdown https://jaywcjlove.github.io/idoc/
+  html-to-markdown --output="dist"
+  echo "<h1>hello world</h1>"| html-to-markdown - --stdout
+```
+
+Support Config
+
+In the project's root directory, add a `.htm2mdrc.js` file with the following configuration to enable the [rehype](https://github.com/rehypejs/rehype/blob/main/doc/plugins.md#list-of-plugins) and [remark](https://github.com/remarkjs/remark/blob/main/doc/plugins.md#list-of-plugins) plugins.
+
+```js
+/**
+ * @typedef {import("@wcj/html-to-markdown").Options} Options
+ * @type {Options}
+ **/
+export default { 
+  rehypeParseOption: {},
+  rehypePlugins: [],
+  remarkPlugins: [],
+};
+```
+
 ## Usage
 
 ```js
@@ -96,7 +134,7 @@ As always, thanks to our amazing contributors!
   <img src="https://jaywcjlove.github.io/html-to-markdown-cli/CONTRIBUTORS.svg" />
 </a>
 
-Made with [action-contributors](https://github.com/jaywcjlove/github-action-contributors).
+Made with [contributors](https://github.com/jaywcjlove/github-action-contributors).
 
 ## License
 
