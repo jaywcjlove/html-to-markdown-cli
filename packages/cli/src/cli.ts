@@ -25,6 +25,7 @@ function outputHelp() {
   console.log('   \x1b[35mhtml-to-markdown\x1b[0m ./html/index.html');
   console.log('   \x1b[35mhtml-to-markdown\x1b[0m https://jaywcjlove.github.io/idoc/');
   console.log('   \x1b[35mhtml-to-markdown\x1b[0m \x1b[33m--output\x1b[0m="dist"');
+  console.log('   echo \x1b[33m"<h1>hello world</h1>"\x1b[0m| \x1b[35mhtml-to-markdown\x1b[0m \x1b[33m - --stdout');
   console.log('');
   console.log('');
 }
