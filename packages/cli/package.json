@@ -1,6 +1,6 @@
 {
   "name": "@wcj/html-to-markdown-cli",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "description": "Command line tool for html conversion markdown.",
   "author": "jaywcjlove",
   "type": "module",
@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "@types/minimist": "~1.2.2",
-    "@wcj/html-to-markdown": "2.0.1",
+    "@wcj/html-to-markdown": "2.1.0",
     "auto-config-loader": "^1.7.7",
     "fs-extra": "^11.1.1",
     "minimist": "~1.2.6",
