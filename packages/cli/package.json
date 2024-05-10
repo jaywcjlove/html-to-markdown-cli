@@ -29,6 +29,7 @@
   "dependencies": {
     "@types/minimist": "~1.2.2",
     "@wcj/html-to-markdown": "2.0.1",
+    "auto-config-loader": "^1.7.7",
     "fs-extra": "^11.1.1",
     "minimist": "~1.2.6",
     "node-fetch": "^3.2.3"

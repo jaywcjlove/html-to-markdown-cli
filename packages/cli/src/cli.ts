@@ -6,6 +6,7 @@ import minimist from 'minimist';
 import fs from 'fs-extra';
 import fetch from 'node-fetch';
 import htm2md from '@wcj/html-to-markdown';
+import { autoConf, AutoConfOption } from 'auto-config-loader';
 
 export const isAbsoluteURL = (str: string) => /^[a-z][a-z0-9+.-]*:/.test(str);
 // can't find with import.meta.url because that would result in 'cli'
@@ -80,7 +81,12 @@ let output;
       htmlStr = await response.text();
       console.log(`  🌐 Request: \x1b[34;1m${filePath}\x1b[0m`);
     }
-    const mdStr = await htm2md({ html: htmlStr });
+    const configOption: AutoConfOption<{}> = {
+      default: {},
+      mustExist: true,
+    };
+    const options = autoConf('htm2md', configOption) || {};
+    const mdStr = await htm2md({ html: htmlStr, ...options });
     if (argvs.s || argvs.stdout){
 	    console.log(mdStr);
     } else {

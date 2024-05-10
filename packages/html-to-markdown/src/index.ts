@@ -7,7 +7,7 @@ import rehypeFormat from 'rehype-format';
 import remarkGfm from 'remark-gfm';
 import rehypeVideo from 'rehype-video';
 
-type Options = {
+export type Options = {
   html?: string
   url?: string
   rehypeParseOption?: RehypeParseOptions;

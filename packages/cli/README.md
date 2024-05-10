@@ -49,6 +49,24 @@ Example:
   html-to-markdown --output="dist"
 ```
 
+## Support Config
+
+In the project's root directory, add a `.htm2mdrc.js` file with the following configuration to enable the [rehype](https://github.com/rehypejs/rehype/blob/main/doc/plugins.md#list-of-plugins) and [remark](https://github.com/remarkjs/remark/blob/main/doc/plugins.md#list-of-plugins) plugins.
+
+```js
+/**
+ * @typedef {import("@wcj/html-to-markdown").Options} Options
+ * @type {Options}
+ **/
+export default { 
+  rehypeParseOption: {},
+  rehypePlugins: [],
+  remarkPlugins: [],
+};
+```
+
+The configuration is supported by [auto-config-loader](https://github.com/jaywcjlove/auto-config-loader) and it supports configurations in formats of `.htm2mdrc.js`, `.htm2mdrc.mjs`, `.htm2mdrc.cjs`, and `.htm2mdrc.ts`.
+
 ## License
 
 Licensed under the MIT License.
