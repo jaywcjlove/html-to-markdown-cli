@@ -35,12 +35,8 @@ if (argvs.h || argvs.help) {
   outputHelp();
   process.exit(0);
 }
+
 let output;
-const logNot =`
-Please specify a URL or file path.
-Example:  \x1b[35mhtml-to-markdown\x1b[0m \x1b[33m./html/index.html\x1b[0m
-          \x1b[35mhtml-to-markdown\x1b[0m \x1b[33mhttps://github.com/jaywcjlove/html-to-markdown-cli\x1b[0m
-`
 
 ;(async () => {
   try {
@@ -56,22 +52,22 @@ Example:  \x1b[35mhtml-to-markdown\x1b[0m \x1b[33m./html/index.html\x1b[0m
       process.exit(1);
     }
 
-    if (!argvs.s && !argvs.stdout){
-	argvs.output = argvs.o = path.resolve(argvs.output || argvs.o || 'dist');
-	output = path.resolve(argvs.output, path.basename(filePath) + '.md');
+    if (!argvs.s && !argvs.stdout) {
+      argvs.output = argvs.o = path.resolve(argvs.output || argvs.o || 'dist');
+      output = path.resolve(argvs.output, path.basename(filePath) + '.md');
     }
     let htmlStr = '';
-    if (filePath === '-'){
-	for await (const line of createInterface({ input: process.stdin })) {
-	    (async () => {
-		try {
-		    htmlStr += line;
-		}catch (error) {
-		    console.log(` \x1b[31mhtml-to-markdown:\x1b[0m`, error);
-		    process.exit(1);
-		}
-	    })();
-	}
+    if (filePath === '-') {
+      for await (const line of createInterface({ input: process.stdin })) {
+        (async () => {
+          try {
+              htmlStr += line;
+          } catch (error) {
+              console.log(` \x1b[31mhtml-to-markdown:\x1b[0m`, error);
+              process.exit(1);
+          }
+        })();
+      }
     } else if (!isAbsoluteURL(filePath)) {
       filePath = path.resolve(filePath);
       if (!isAbsoluteURL(filePath) && !fs.existsSync(filePath)) {
@@ -86,12 +82,12 @@ Example:  \x1b[35mhtml-to-markdown\x1b[0m \x1b[33m./html/index.html\x1b[0m
     }
     const mdStr = await htm2md({ html: htmlStr });
     if (argvs.s || argvs.stdout){
-	console.log(mdStr);
-    }else{
-	await fs.ensureDir(argvs.output);
-	await fs.writeFile(output, mdStr);
-	console.log(` \x1b[34;1m 🎉 Compliled successfully!\x1b[0m`);
-	console.log(`  ╰┈ Output: \x1b[32;1m${output}\x1b[0m\n`);
+	    console.log(mdStr);
+    } else {
+      await fs.ensureDir(argvs.output);
+      await fs.writeFile(output, mdStr);
+      console.log(` \x1b[34;1m 🎉 Compliled successfully!\x1b[0m`);
+      console.log(`  ╰┈ Output: \x1b[32;1m${output}\x1b[0m\n`);
     }
   } catch (error) {
     // if (error instanceof Error) {
