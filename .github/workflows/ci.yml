@@ -81,6 +81,13 @@ jobs:
       - name: 📦 @wcj/html-to-markdown-cli publish to NPM
         run: npm publish --access public --provenance
         continue-on-error: true
+        working-directory: packages/cli
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: 📦 @wcj/html-to-markdown publish to NPM
+        run: npm publish --access public --provenance
+        continue-on-error: true
         working-directory: packages/html-to-markdown
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
