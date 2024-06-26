@@ -12,11 +12,11 @@ it('htmlToMarkdown test case basic-syntax', async () => {
   expect(await htmlToMarkdown({ html: `<p><em><strong>粗斜体文本</strong></em></p>` })).toEqual('***粗斜体文本***\n');
   expect(await htmlToMarkdown({ html: `<pre class="language-bash"><code class="language-bash code-highlight"><span class="code-line">$ npx idoc init myapp</span></code></pre>` })).toEqual(`\`\`\`bash\n$ npx idoc init myapp\n\`\`\`\n`);
   expect(await htmlToMarkdown({ html: `<html> <body> <h1>我的第一个标题</h1> <p>我的第一个段落。</p> </body> </html>` })).toEqual('# 我的第一个标题\n\n我的第一个段落。\n');
-  expect(await htmlToMarkdown({ html: `<p> Hello <!--rehype:ignore:start--> <code>World</code> <!--rehype:ignore:end--> </p>` })).toEqual('Hello <!--rehype:ignore:start-->`World`<!--rehype:ignore:end-->\n');
+  expect(await htmlToMarkdown({ html: `<p> Hello <!--rehype:ignore:start--> <code>World</code> <!--rehype:ignore:end--> </p>` })).toEqual('Hello\n');
 });
 
 it('htmlToMarkdown test case ignore', async () => {
-  expect(await htmlToMarkdown({ html: `<p> Hello <!--rehype:ignore:start--> <code>World</code> <!--rehype:ignore:end--> </p>` })).toEqual('Hello <!--rehype:ignore:start-->`World`<!--rehype:ignore:end-->\n');
+  expect(await htmlToMarkdown({ html: `<p> Hello <!--rehype:ignore:start--> <code>World</code> <!--rehype:ignore:end--> </p>` })).toEqual('Hello\n');
 });
 
 it('htmlToMarkdown test list', async () => {
