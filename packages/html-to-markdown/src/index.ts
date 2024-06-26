@@ -27,13 +27,13 @@ export default async function htmlToMarkdown(options: Options = {}) {
   const { rehypeParseOption, remarkPlugins = [], rehypePlugins = [] } = options;
   const file = await unified()
     .use(rehypeParse, { fragment: true, ...rehypeParseOption })
-    .use(rehypeRemark)
     .use(rehypeIgnore)
     .use(remarkGfm)
     .use(rehypeVideo)
     .use(rehypeFormat)
-    .use(remarkPlugins || [])
     .use(rehypePlugins || [])
+    .use(rehypeRemark)
+    .use(remarkPlugins || [])
     .use(remarkStringify)
     .processSync(options.html)
   return String(file);
