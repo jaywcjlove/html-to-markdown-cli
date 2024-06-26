@@ -18,11 +18,13 @@
     "url": "git+https://github.com/jaywcjlove/html-to-markdown-cli.git"
   },
   "workspaces": [
-    "packages/**"
+    "packages/**", "example/*"
   ],
   "license": "MIT",
   "jest": {
-    "extensionsToTreatAsEsm": [".ts"],
+    "extensionsToTreatAsEsm": [
+      ".ts"
+    ],
     "moduleNameMapper": {
       "^(\\.{1,2}/.*)\\.js$": "$1"
     },

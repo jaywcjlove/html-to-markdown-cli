@@ -1,0 +1,16 @@
+{
+  "name": "@wcj/demo1",
+  "version": "2.1.0",
+  "private": true,
+  "scripts": {
+    "start": "html-to-markdown index.html"
+  },
+  "keywords": [],
+  "author": "jaywcjlove",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@wcj/html-to-markdown-cli": "^2.1.0",
+    "rehype-rewrite": "^4.0.2"
+  }
+}
