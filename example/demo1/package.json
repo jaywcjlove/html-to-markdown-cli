@@ -1,6 +1,6 @@
 {
   "name": "@wcj/demo1",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "private": true,
   "scripts": {
     "start": "html-to-markdown index.html"
@@ -10,7 +10,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "@wcj/html-to-markdown-cli": "^2.1.0",
+    "@wcj/html-to-markdown-cli": "2.1.1",
     "rehype-rewrite": "^4.0.2"
   }
 }
